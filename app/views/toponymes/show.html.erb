@@ -1,0 +1,29 @@
+
+<small>Created by <%= @enqueteur.nom %></small>
+<%= simple_format(@toponyme.toponyme_actuel) %>
+
+<h3>Attached File</h3>
+<div class="asset">
+
+
+
+</div>
+
+
+<%= link_to "Edit Toponyme", [:edit, @enqueteur, @toponyme] %>
+
+<div id='toponyme'>
+<h2>Toponyme actuel  : <%= @toponyme.toponyme_actuel %></h2>
+<table>
+<tr><td>variante graphique </td><td> <%= simple_format(@toponyme.variante_graphique) %></td>
+<tr><td>prononciation locale </td><td> <%= simple_format(@toponyme.prononciation_locale) %></td>
+<tr><td>emploi contexte </td><td><%= simple_format(@toponyme.emploi_contexte) %></td>
+<tr><td>étymologie proposée </td><td><%= simple_format(@toponyme.ethymologie_proposee) %></td>
+</table>
+</div>
+
+
+<%= link_to "Delete Toponyme",
+enqueteur_toponyme_path(@enqueteur, @toponyme),
+:method => :delete,
+:confirm => "Are you sure you want to delete this toponyme?" %>

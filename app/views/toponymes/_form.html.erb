@@ -1,0 +1,37 @@
+<%= form_for [@enqueteur, @toponyme] do |f| %>
+<%= f.error_messages %>
+<p>
+<%= f.label :toponyme_actuel %><br>
+<%= f.text_field :toponyme_actuel %>
+</p>
+<p>
+<%= f.label :variante_graphique %><br>
+<%= f.text_area :variante_graphique %>
+</p>
+<p>
+<%= f.label :prononciation_locale %><br>
+<%= f.text_area :prononciation_locale %>
+</p>
+<p>
+<%= f.label :emploi_contexte %><br>
+<%= f.text_area :emploi_contexte %>
+</p>
+<p>
+<%= f.label :ethymologie_proposee %><br>
+<%= f.text_area :ethymologie_proposee %>
+</p>
+<p>
+<%= f.label :asset, "File" %>
+<%= f.file_field :asset %>
+</p>
+
+<h4>New Files</h4>
+
+
+
+
+<h4>Old Files</h4>
+
+
+<%= f.submit %>
+<% end %>

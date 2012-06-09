@@ -2,13 +2,13 @@
 <h2><%= @enqueteur.nom %></h2>
 <h2><%= @enqueteur.date_enquete %></h2>
 <h2><%= @enqueteur.informateur %></h2>
-<%= admins_only do %>
+
 <%= link_to "Edit Enqueteur", edit_enqueteur_path(@enqueteur) %>
+
 <%= link_to "Delete Enqueteur", @enqueteur, :method => :delete, :confirm => "Are you sure you want to delete this enqueteur?" %>
-<% end %>
-<%= authorized?("create toponymes".to_sym, @enqueteur) do %>
+
+
 <%= link_to "New Toponyme", new_enqueteur_toponyme_path(@enqueteur) %>
-<% end %>
 <ul id='toponymes'>
 <% @enqueteur.toponymes.each do |toponyme| %>
 <li>

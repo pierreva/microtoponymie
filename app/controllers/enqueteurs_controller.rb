@@ -1,7 +1,7 @@
 class EnqueteursController < ApplicationController
   before_filter :find_enqueteur, :only => [:show, :edit, :update, :destroy]
   def index
-    @enqueteurs = Enqueteur.for(current_user).all
+    @enqueteurs = Enqueteur.all
   end
 
   def new
@@ -38,7 +38,7 @@ class EnqueteursController < ApplicationController
   end
   private
   def find_enqueteur
-    @enqueteur = Enqueteur.for(current_user).find(params[:id])
+    @enqueteur = Enqueteur.find(params[:id])
   rescue ActiveRecord::RecordNotFound
     flash[:alert] = "The enqueteur you were looking for could not be found."
     redirect_to root_path

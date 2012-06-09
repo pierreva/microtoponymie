@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  toponyme_actuel: MyString
+  variante_graphique: MyString
+  prononciation_locale: MyString
+  emploi_contexte: MyString
+  ethymologie_proposee: MyText
+  enqueteur: 
+
+two:
+  toponyme_actuel: MyString
+  variante_graphique: MyString
+  prononciation_locale: MyString
+  emploi_contexte: MyString
+  ethymologie_proposee: MyText
+  enqueteur: 

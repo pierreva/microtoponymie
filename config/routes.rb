@@ -13,7 +13,7 @@ Microtoponymie::Application.routes.draw do
   # Sample resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
   resources :enqueteurs do
-    #resources :toponymes
+    resources :toponymes
   end
   # Sample resource route with options:
   #   resources :products do

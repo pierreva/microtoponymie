@@ -7,3 +7,11 @@ git remote add origin git@github.com:pierreva/microtoponymie.git
 rails g controller enqueteurs
 
 rails g model enqueteur nom:string date_enquete:date informateur:string 
+
+git commit -m "Creation of enqueteurs feature complete"
+
+rails g controller toponymes
+
+rails generate model toponyme toponyme_actuel:string variante_graphique:string prononciation_locale:string emploi_contexte:string ethymologie_proposee:text enqueteur:references
+
+git commit -m "Implemented actions for the toponymes controller"

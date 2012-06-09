@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120609072325) do
+ActiveRecord::Schema.define(:version => 20120609075323) do
 
   create_table "enqueteurs", :force => true do |t|
     t.string   "nom"
@@ -20,5 +20,18 @@ ActiveRecord::Schema.define(:version => 20120609072325) do
     t.datetime "created_at",   :null => false
     t.datetime "updated_at",   :null => false
   end
+
+  create_table "toponymes", :force => true do |t|
+    t.string   "toponyme_actuel"
+    t.string   "variante_graphique"
+    t.string   "prononciation_locale"
+    t.string   "emploi_contexte"
+    t.text     "ethymologie_proposee"
+    t.integer  "enqueteur_id"
+    t.datetime "created_at",           :null => false
+    t.datetime "updated_at",           :null => false
+  end
+
+  add_index "toponymes", ["enqueteur_id"], :name => "index_toponymes_on_enqueteur_id"
 
 end
