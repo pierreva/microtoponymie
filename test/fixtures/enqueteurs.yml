@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  nom: MyString
+  date_enquete: 2012-06-09
+  informateur: MyString
+
+two:
+  nom: MyString
+  date_enquete: 2012-06-09
+  informateur: MyString

@@ -1,14 +1,25 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Microtoponymie</title>
+  <title>	<% if content_for?(:title) %>
+	<%= yield(:title) %>
+	<% else %>
+	Toponymes
+	<% end %></title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+<% flash.each do |key, value| %>
+<div class='flash' id='<%= key %>'>
+<%= value %>
+</div>
+<% end %>
+<h1><%= link_to "Toponymes", root_path %></h1>
 
 <%= yield %>
+
 
 </body>
 </html>

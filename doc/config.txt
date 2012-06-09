@@ -1,0 +1,9 @@
+$ rails new microtoponymie -d=mysql
+
+
+git remote add origin git@github.com:pierreva/microtoponymie.git
+
+
+rails g controller enqueteurs
+
+rails g model enqueteur nom:string date_enquete:date informateur:string 

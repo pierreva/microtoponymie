@@ -1,0 +1,9 @@
+<%= admins_only do %>
+<%= link_to "New Enqueteur", new_enqueteur_path %>
+<% end %>
+<h2>Enqueteurs</h2>
+<ul>
+<% @enqueteurs.each do |enqueteur| %>
+<li><%= link_to enqueteur.nom, enqueteur %></li>
+<% end %>
+</ul>

@@ -1,0 +1,16 @@
+<%= form_for(@enqueteur) do |f| %>
+<%= f.error_messages %>
+<p>
+<%= f.label :nom %>
+<%= f.text_field :nom %>
+</p>
+<p>
+<%= f.label :date_enquete %>
+<%= f.text_field :date_enquete %>
+</p>
+<p>
+<%= f.label :informateur %>
+<%= f.text_field :informateur %>
+</p>
+<%= f.submit %>
+<% end %>
